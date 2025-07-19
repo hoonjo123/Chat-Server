@@ -34,7 +34,9 @@ public class SecurityConfigs {
                 .httpBasic(AbstractHttpConfigurer::disable) //HTTP Basic 비활성화
                 .authorizeHttpRequests(a -> a.requestMatchers(
                         "/member/create",
-                        "/member/doLogin"
+                        "/member/doLogin",
+                        // 해당 부분은 WebSocketConfig에서 따로 관리
+                        "/connect"
                 ).permitAll().anyRequest().authenticated())
                 // 세션방식을 사용하지 않음
                 .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
