@@ -36,7 +36,7 @@ public class SecurityConfigs {
                         "/member/create",
                         "/member/doLogin",
                         // 해당 부분은 WebSocketConfig에서 따로 관리
-                        "/connect"
+                        "/connect/**"
                 ).permitAll().anyRequest().authenticated())
                 // 세션방식을 사용하지 않음
                 .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
