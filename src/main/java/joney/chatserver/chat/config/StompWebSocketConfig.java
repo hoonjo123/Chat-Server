@@ -33,6 +33,7 @@ public class StompWebSocketConfig implements WebSocketMessageBrokerConfigurer{
 
         // /topic/1과 같이 메시지를 수신해야 함을 설정
         registry.enableSimpleBroker("/topic");
+        // rabbitMQ같이 외장 브로커를 사용하고 싶다면? .enableStompBrokerRelay사용
     }
 
     // 사용자 요청 -> 필터에서 그냥 통과해주고 있음 config로 바로 이동 -> 로그인도 안했는데

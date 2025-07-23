@@ -1,6 +1,7 @@
 package joney.chatserver.member.domain;
 
 import jakarta.persistence.*;
+import joney.chatserver.common.domain.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Member {
+public class Member extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
